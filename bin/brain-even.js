@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import { floor, random } from 'mathjs';
 import readlineSync from 'readline-sync';
 
 const askPlayer = (scoreOfGame, playerName) => {
@@ -8,7 +7,7 @@ const askPlayer = (scoreOfGame, playerName) => {
   if (countRightAnswer === 3) {
     return;
   }
-  const randomNumber = floor(random() * 1000);
+  const randomNumber = Math.floor(Math.random() * 1000);
   const answerCorrect = randomNumber % 2 === 0 ? 'yes' : 'no';
   const answerUser = readlineSync.question(`Question: ${randomNumber} Your answer: `);
   if (answerUser === answerCorrect) {
