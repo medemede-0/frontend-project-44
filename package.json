@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "First project",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-games.js"
   },
   "main": "index.js",
   "scripts": {
