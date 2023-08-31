@@ -4,7 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/aec8f5bd2aac573852b1/maintainability)](https://codeclimate.com/github/medemede-0/frontend-project-44/maintainability)
 
 Brain-Even:
-[![asciicast](https://asciinema.org/a/VORhIEfxcmwFTwBMVlqAOQ7fp.svg)](https://asciinema.org/a/VORhIEfxcmwFTwBMVlqAOQ7fp)
+[[![asciicast](https://asciinema.org/a/VORhIEfxcmwFTwBMVlqAOQ7fp.svg)](https://asciinema.org/a/VORhIEfxcmwFTwBMVlqAOQ7fp)](https://asciinema.org/a/VORhIEfxcmwFTwBMVlqAOQ7fp)
 
 Brain-Calc:
-<script async id="asciicast-0xuwPSTAVhx7Q2J8DM7Apyy22" src="https://asciinema.org/a/0xuwPSTAVhx7Q2J8DM7Apyy22.js"></script>
+[![asciicast](https://asciinema.org/a/0xuwPSTAVhx7Q2J8DM7Apyy22.svg)](https://asciinema.org/a/0xuwPSTAVhx7Q2J8DM7Apyy22)
