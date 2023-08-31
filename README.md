@@ -7,4 +7,4 @@ Brain-Even:
 [![asciicast](https://asciinema.org/a/VORhIEfxcmwFTwBMVlqAOQ7fp.svg)](https://asciinema.org/a/VORhIEfxcmwFTwBMVlqAOQ7fp)
 
 Brain-Calc:
-[![asciicast](https://asciinema.org/a/0xuwPSTAVhx7Q2J8DM7Apyy22.svg)](https://asciinema.org/a/0xuwPSTAVhx7Q2J8DM7Apyy22)
+<script async id="asciicast-0xuwPSTAVhx7Q2J8DM7Apyy22" src="https://asciinema.org/a/0xuwPSTAVhx7Q2J8DM7Apyy22.js"></script>
