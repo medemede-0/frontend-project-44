@@ -2,4 +2,4 @@
 
 import start from '../src/index.js';
 
-start('brain-even');
+start('brain-calc');
