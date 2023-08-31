@@ -1,44 +1,18 @@
 import readlineSync from 'readline-sync';
 import {
-  cons, car, cdr, isPair,
+  car, cdr, isPair,
 } from '@hexlet/pairs';
+import generateRoundBrainEven from '../games/generateRoundBrainEven.js';
+import generateRoundBrainCalc from '../games/generateRoundBrainCalc.js';
 
-const operationsArray = ['+', '-', '*'];
 const maxNumberOfRounds = 3;
-
-const getRandomIntNumber = (num) => Math.floor(Math.random() * num);
-
-const brainEven = () => {
-  const randomNumber = getRandomIntNumber(1000);
-  const answer = randomNumber % 2 === 0 ? 'yes' : 'no';
-  return cons(randomNumber, answer);
-};
-
-const brainCalc = () => {
-  const randomNumber1 = getRandomIntNumber(99);
-  const randomNumber2 = getRandomIntNumber(99);
-  const randomOperation = operationsArray[Math.floor(Math.random() * 2)];
-
-  const question = (`${randomNumber1} ${randomOperation} ${randomNumber2}`);
-  let answer;
-  switch (randomOperation) {
-    case '+':
-      answer = randomNumber1 + randomNumber2; break;
-    case '-':
-      answer = randomNumber1 - randomNumber2; break;
-    default:
-      answer = randomNumber1 * randomNumber2; break;
-  }
-
-  return cons(question, answer);
-};
 
 const generateRound = (typeOfGame) => {
   switch (typeOfGame) {
     case 'brain-even':
-      return brainEven();
+      return generateRoundBrainEven();
     case 'brain-calc':
-      return brainCalc();
+      return generateRoundBrainCalc();
     default:
       return false;
   }
@@ -84,10 +58,10 @@ export default (typeOfGame) => {
         console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answerCorrect}'\nLet's try again, ${playerName}!`);
         return;
       }
-
-      console.log(`Congratulations, ${playerName}!`);
     } else {
       console.log('Round not generate. Try again');
+      return;
     }
   }
+  console.log(`Congratulations, ${playerName}!`);
 };
