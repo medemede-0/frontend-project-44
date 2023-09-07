@@ -4,6 +4,7 @@ import {
 } from '@hexlet/pairs';
 import generateRoundBrainEven from '../games/generateRoundBrainEven.js';
 import generateRoundBrainCalc from '../games/generateRoundBrainCalc.js';
+import generateRoundBrainGcd from '../games/generateRoundBrainGcd.js';
 
 const maxNumberOfRounds = 3;
 
@@ -13,6 +14,8 @@ const generateRound = (typeOfGame) => {
       return generateRoundBrainEven();
     case 'brain-calc':
       return generateRoundBrainCalc();
+    case 'brain-gcd':
+      return generateRoundBrainGcd();
     default:
       return false;
   }
@@ -30,6 +33,9 @@ export default (typeOfGame) => {
       break;
     case 'brain-calc':
       console.log('What is the result of the expression?');
+      break;
+    case 'brain-gcd':
+      console.log('Find the greatest common divisor of given numbers.');
       break;
     default:
       console.log('This game is not found.');
