@@ -6,6 +6,7 @@ import generateRoundBrainEven from '../games/generateRoundBrainEven.js';
 import generateRoundBrainCalc from '../games/generateRoundBrainCalc.js';
 import generateRoundBrainGcd from '../games/generateRoundBrainGcd.js';
 import generateRoundBrainProgression from '../games/generateRoundBrainProgression.js';
+import generateRoundBrainPrime from '../games/generateRoundBrainPrime.js';
 
 const maxNumberOfRounds = 3;
 
@@ -19,6 +20,8 @@ const generateRound = (typeOfGame) => {
       return generateRoundBrainGcd();
     case 'brain-progression':
       return generateRoundBrainProgression();
+    case 'brain-prime':
+      return generateRoundBrainPrime();
     default:
       return false;
   }
@@ -42,6 +45,9 @@ export default (typeOfGame) => {
       break;
     case 'brain-progression':
       console.log('What number is missing in the progression?');
+      break;
+    case 'brain-prime':
+      console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
       break;
     default:
       console.log('This game is not found.');
