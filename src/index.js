@@ -5,6 +5,7 @@ import {
 import generateRoundBrainEven from '../games/generateRoundBrainEven.js';
 import generateRoundBrainCalc from '../games/generateRoundBrainCalc.js';
 import generateRoundBrainGcd from '../games/generateRoundBrainGcd.js';
+import generateRoundBrainProgression from '../games/generateRoundBrainProgression.js';
 
 const maxNumberOfRounds = 3;
 
@@ -16,6 +17,8 @@ const generateRound = (typeOfGame) => {
       return generateRoundBrainCalc();
     case 'brain-gcd':
       return generateRoundBrainGcd();
+    case 'brain-progression':
+      return generateRoundBrainProgression();
     default:
       return false;
   }
@@ -36,6 +39,9 @@ export default (typeOfGame) => {
       break;
     case 'brain-gcd':
       console.log('Find the greatest common divisor of given numbers.');
+      break;
+    case 'brain-progression':
+      console.log('What number is missing in the progression?');
       break;
     default:
       console.log('This game is not found.');
