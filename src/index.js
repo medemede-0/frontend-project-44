@@ -60,17 +60,9 @@ export default (typeOfGame) => {
       const question = car(round);
       const answerCorrect = cdr(round);
       console.log(`Question: ${question}`);
-      let answerUser;
-      switch (typeof (answerCorrect)) {
-        case 'string':
-          answerUser = readlineSync.question('Your answer: '); break;
-        case 'number':
-          answerUser = readlineSync.questionInt('Your answer: '); break;
-        default:
-          console.log('Error');
-      }
 
-      if (answerUser === answerCorrect) {
+      const answerUser = readlineSync.question('Your answer: ');
+      if (answerUser === answerCorrect.toString()) {
         console.log('Correct!');
       } else {
         console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answerCorrect}'\nLet's try again, ${playerName}!`);
