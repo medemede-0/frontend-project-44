@@ -2,11 +2,11 @@ import readlineSync from 'readline-sync';
 import {
   car, cdr, isPair,
 } from '@hexlet/pairs';
-import generateRoundBrainEven from '../games/generateRoundBrainEven.js';
-import generateRoundBrainCalc from '../games/generateRoundBrainCalc.js';
-import generateRoundBrainGcd from '../games/generateRoundBrainGcd.js';
-import generateRoundBrainProgression from '../games/generateRoundBrainProgression.js';
-import generateRoundBrainPrime from '../games/generateRoundBrainPrime.js';
+import generateRoundBrainEven from './games/generateRoundBrainEven.js';
+import generateRoundBrainCalc from './games/generateRoundBrainCalc.js';
+import generateRoundBrainGcd from './games/generateRoundBrainGcd.js';
+import generateRoundBrainProgression from './games/generateRoundBrainProgression.js';
+import generateRoundBrainPrime from './games/generateRoundBrainPrime.js';
 
 const maxNumberOfRounds = 3;
 
