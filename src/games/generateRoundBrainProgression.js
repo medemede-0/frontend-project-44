@@ -1,35 +1,27 @@
 import { cons } from '@hexlet/pairs';
 import getRandomNumber from './getRandomNumber.js';
 
+const getProgressionArray = (length, begin, step) => {
+  const progressionArray = [];
+  let currentItem = begin;
+
+  for (let i = 0; i < length; i += 1) {
+    progressionArray.push(currentItem);
+    currentItem += step;
+  }
+
+  return progressionArray;
+};
+
 export default () => {
   const progressLength = getRandomNumber(10, 5);
-  const position = getRandomNumber(progressLength - 1);
+  const hiddenPosition = getRandomNumber(progressLength - 1);
   const progressBegin = getRandomNumber(100);
   const progressStep = getRandomNumber(20);
-
-  let question;
-  if (position === 0) {
-    question = '..';
-  } else {
-    question = `${progressBegin}`;
-  }
-
-  let progressCurrent = progressBegin;
-  let answer;
-
-  for (let i = 0; i < progressLength; i += 1) {
-    if (i === 0) {
-      answer = progressBegin;
-    } else {
-      progressCurrent += progressStep;
-      if (i === position) {
-        answer = progressCurrent;
-        question = `${question} ..`;
-      } else {
-        question = `${question} ${progressCurrent}`;
-      }
-    }
-  }
+  const progressArray = getProgressionArray(progressLength, progressBegin, progressStep);
+  const answer = progressArray[hiddenPosition];
+  progressArray[hiddenPosition] = '..';
+  const question = progressArray.toString();
 
   return cons(question, answer);
 };

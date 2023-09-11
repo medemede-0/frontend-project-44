@@ -1,13 +1,10 @@
 import { cons } from '@hexlet/pairs';
 import getRandomNumber from './getRandomNumber.js';
 
-export default () => {
-  const randomNumber1 = getRandomNumber(1000);
-  const randomNumber2 = getRandomNumber(1000);
+const getGcd = (num1, num2) => {
+  let a = num1;
+  let b = num2;
 
-  const question = (`${randomNumber1} ${randomNumber2}`);
-  let a = randomNumber1;
-  let b = randomNumber2;
   while (a !== 0 && b !== 0) {
     if (a > b) {
       a %= b;
@@ -15,7 +12,16 @@ export default () => {
       b %= a;
     }
   }
-  const answer = a + b;
+
+  return a + b;
+};
+
+export default () => {
+  const randomNumber1 = getRandomNumber(1000);
+  const randomNumber2 = getRandomNumber(1000);
+
+  const question = (`${randomNumber1} ${randomNumber2}`);
+  const answer = getGcd(randomNumber1, randomNumber2);
 
   return cons(question, answer);
 };
