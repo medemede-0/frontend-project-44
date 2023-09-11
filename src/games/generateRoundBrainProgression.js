@@ -21,7 +21,7 @@ export default () => {
   const progressArray = getProgressionArray(progressLength, progressBegin, progressStep);
   const answer = progressArray[hiddenPosition];
   progressArray[hiddenPosition] = '..';
-  const question = progressArray.toString();
+  const question = progressArray.join(' ');
 
   return cons(question, answer);
 };
