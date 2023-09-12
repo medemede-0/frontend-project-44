@@ -1,6 +1,8 @@
 import { cons } from '@hexlet/pairs';
 import getRandomNumber from './getRandomNumber.js';
+import start from '../index.js';
 
+const descOfGame = 'What is the result of the expression?';
 const operationsArray = ['+', '-', '*'];
 
 const calculate = (num1, num2, oper) => {
@@ -14,7 +16,7 @@ const calculate = (num1, num2, oper) => {
   }
 };
 
-export default () => {
+const generateRoundBrainCalc = () => {
   const randomNumber1 = getRandomNumber(99);
   const randomNumber2 = getRandomNumber(99);
   const randomOperation = operationsArray[Math.floor(Math.random() * 2)];
@@ -24,3 +26,5 @@ export default () => {
 
   return cons(question, answer);
 };
+
+export default () => start(generateRoundBrainCalc, descOfGame);

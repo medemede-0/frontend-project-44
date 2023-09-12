@@ -1,5 +1,8 @@
 import { cons } from '@hexlet/pairs';
 import getRandomNumber from './getRandomNumber.js';
+import start from '../index.js';
+
+const descOfGame = 'What number is missing in the progression?';
 
 const getProgressionArray = (length, begin, step) => {
   const progressionArray = [];
@@ -13,7 +16,7 @@ const getProgressionArray = (length, begin, step) => {
   return progressionArray;
 };
 
-export default () => {
+const generateRoundBrainProgression = () => {
   const progressLength = getRandomNumber(10, 5);
   const hiddenPosition = getRandomNumber(progressLength - 1);
   const progressBegin = getRandomNumber(100);
@@ -25,3 +28,5 @@ export default () => {
 
   return cons(question, answer);
 };
+
+export default () => start(generateRoundBrainProgression, descOfGame);

@@ -1,5 +1,8 @@
 import { cons } from '@hexlet/pairs';
 import getRandomNumber from './getRandomNumber.js';
+import start from '../index.js';
+
+const descOfGame = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (num1, num2) => {
   let a = num1;
@@ -16,7 +19,7 @@ const getGcd = (num1, num2) => {
   return a + b;
 };
 
-export default () => {
+const generateRoundBrainGcd = () => {
   const randomNumber1 = getRandomNumber(1000);
   const randomNumber2 = getRandomNumber(1000);
 
@@ -25,3 +28,5 @@ export default () => {
 
   return cons(question, answer);
 };
+
+export default () => start(generateRoundBrainGcd, descOfGame);
